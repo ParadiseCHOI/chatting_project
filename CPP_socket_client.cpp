@@ -1,4 +1,4 @@
-//https://kevinthegrey.tistory.com/26 Âü°íÇÔ
+//https://kevinthegrey.tistory.com/26 ì°¸ê³ í•¨
 
 #include <stdio.h>
 #include <WinSock2.h>
@@ -6,7 +6,7 @@
 
 #define PORT	4578
 #define PACKET_SIZE 1024
-#define SERVER_IP	"192.168.35.231"
+#define SERVER_IP	"192.168.xx.xxx"
 
 int main()
 {
@@ -21,8 +21,8 @@ int main()
 	tAddr.sin_port = htons(PORT);
 	tAddr.sin_addr.s_addr = inet_addr(SERVER_IP);
 
-	connect(hSocket, (SOCKADDR*)&tAddr, sizeof(tAddr)); //Å¬¶óÀÌ¾ğÆ®¿¡¼­´Â bind ´ë½Å connect ÇÔ¼ö¸¦ »ç¿ë
-	//connectÇÔ¼ö´Â ÁöÁ¤µÈ ¼ÒÄÏ¿¡ ¿¬°áÀ» ¼³Á¤. ¼­¹ö¿¡ ¿¬°áÇÏ±â À§ÇØ connect ÇÔ¼ö¸¦ »ç¿ë.
+	connect(hSocket, (SOCKADDR*)&tAddr, sizeof(tAddr)); //í´ë¼ì´ì–¸íŠ¸ì—ì„œëŠ” bind ëŒ€ì‹  connect í•¨ìˆ˜ë¥¼ ì‚¬ìš©
+	//connectí•¨ìˆ˜ëŠ” ì§€ì •ëœ ì†Œì¼“ì— ì—°ê²°ì„ ì„¤ì •. ì„œë²„ì— ì—°ê²°í•˜ê¸° ìœ„í•´ connect í•¨ìˆ˜ë¥¼ ì‚¬ìš©.
 
 	char	cMsg[] = "Client Send";
 	send(hSocket, cMsg, strlen(cMsg), 0);
